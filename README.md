@@ -78,6 +78,12 @@ Before we begin, let's install some necessary packages:
 $ sudo apt install libvirt-daemon-system libvirt-clients qemu-kvm qemu-utils virt-manager ovmf
 ```
 
+In Arch:
+
+```
+$ sudo pacman -S libvirt qemu virt-manager virt-viewer bridge-utils edk2-ovmf dmidecode dnsmasq ebtables usbutils 
+```
+
 Restart your machine and boot into BIOS. Enable a feature called `IOMMU`. You'll also need to enable CPU virtualization. For Intel processors, look for something called `VT-d`. For AMD, look for something called `AMD-Vi`. My motherboard is unique so I had to enable a feature called `SVM Mode`. Save any changes and restart the machine.
 
 Once you've booted into the host, make sure that IOMMU is enabled:
